@@ -1,0 +1,43 @@
+{
+  "name": "cryptoscoffee",
+  "private": true,
+  "version": "1.0.0-beta.0",
+  "scripts": {
+    "start": "concurrently --kill-others \"node webpack.server.js\" \"node_modules/.bin/nodemon server.js\"",
+    "test": "cross-env NODE_ENV=test babel-node test/sagas.js | tap-spec"
+  },
+  "dependencies": {
+    "redux-saga": "^1.0.0-beta.0",
+    "superagent": "^3.8.3"
+  },
+  "devDependencies": {
+    "@babel/core": "7.0.0-beta.39",
+    "@babel/node": "7.0.0-beta.39",
+    "@babel/polyfill": "7.0.0-beta.39",
+    "@babel/preset-env": "7.0.0-beta.39",
+    "@babel/preset-react": "7.0.0-beta.39",
+    "@babel/preset-stage-2": "7.0.0-beta.39",
+    "babel-loader": "8.0.0-beta.0",
+    "concurrently": "^3.5.0",
+    "cross-env": "^1.0.8",
+    "express": "^4.13.3",
+    "isomorphic-fetch": "^2.2.0",
+    "lint-staged": "^3.4.2",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "react-redux": "^4.4.5",
+    "react-scripts": "1.0.7",
+    "should": "^13.2.1",
+    "should-http": "^0.1.1",
+    "supertest": "^3.0.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.2.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-dev-server": "^2.11.0",
+    "webpack-hot-middleware": "^2.19.1",
+    "webpack-manifest-plugin": "^1.3.2"
+  }
+}
